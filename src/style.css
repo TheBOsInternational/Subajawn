@@ -1,0 +1,109 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4);
+    background-size: 600% 600%;
+    animation: gradientAnimation 16s ease infinite;
+    position: relative;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.background-text {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    width: 200%;
+    height: 200%;
+    transform: rotate(45deg);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    user-select: none; /* Disable text selection */
+}
+
+.background-text div {
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 2vw;
+    padding: 1rem;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.message{
+    max-width: 600px;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    text-shadow: black 3px 1px 15px;
+
+}
+
+.main-message {
+    position: relative;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.demands-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 600px; /* Fixed width */
+    height: 600px; /* Fixed height */
+    justify-content: space-between; /* Ensure arrows are always in the same place */
+}
+
+.arrow-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    text-shadow: 1px;
+}
+
+.demand-text {
+    font-size: 1.7rem;
+    color: white;
+    text-align: center;
+    text-shadow: black 3px 1px 15px;
+    flex-grow: 1;
+    max-width: 450px;
+}
+
+.demand-counter {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: white;
+}
